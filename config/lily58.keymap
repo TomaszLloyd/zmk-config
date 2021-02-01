@@ -40,9 +40,9 @@
 //                     |  ALT | GUI  |      | SPACE  |  | ENTER |      |  BSPC |  GUI  |
 			bindings = <
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG
-&kp TAB      &trans        &mt ALT F1        &mt ALT F2        &kp F3       &trans                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
-&kp LCTRL    &kp EXCL      &mt ALT F4        &mt ALT F5        &kp F6       &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&kp LSHFT    &trans        &mt ALT F7        &mt ALT F8        &mt ALT F9    &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp LSHFT
+&kp TAB      &trans        &mt LALT F1        &mt LALT F2        &kp LALT F3       &trans                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
+&kp LCTRL    &kp EXCL      &mt LALT F4        &mt LALT F5        &kp LALT F6       &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
+&kp LSHFT    &trans        &mt LALT F7        &mt LALT F8        &mt LALT F9    &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp LSHFT
                            &kp LALT          &kp LGUI          &kp SPACE    &trans   &kp RET    &trans    &kp BSPC    &kp RGUI
 			>;
 
