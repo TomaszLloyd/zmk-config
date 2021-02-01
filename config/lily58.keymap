@@ -40,9 +40,9 @@
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4  &kp C_VOL_DN    &kp C_VOL_UP   &trans   &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG
-&kp F1     &kp F2           &mt LALT F1    &mt LALT F2       &mt LALT F3  &kp F6        &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp BSLH
-&kp LCTRL  &kp EXCL         &mt LALT F4    &mt LALT F5       &mt LALT F6  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&kp LSHFT  &trans           &mt LALT F7    &mt LALT F8       &mt LALT F9  &trans        &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp LSHFT
+&kp F1     &kp F2           &mt LGUI F1    &mt LGUI F2       &mt LGUI F3  &kp F6        &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp BSLH
+&kp LCTRL  &kp EXCL         &mt LGUI F4    &mt LGUI F5       &mt LGUI F6  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
+&kp LSHFT  &trans           &mt LGUI F7    &mt LGUI F8       &mt LGUI F9  &trans        &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp LSHFT
                                               &kp LALT &kp LGUI       &trans    &kp SPACE  &kp RET    &trans    &kp BSPC &kp RGUI
 			>;
 
