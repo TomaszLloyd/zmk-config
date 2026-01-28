@@ -41,11 +41,9 @@ jobs:
         if: always()
         run: |
           echo "=== Display chosen node ==="
-          grep -A2 "chosen {" build/zephyr/zephyr.dts || true
-          echo "=== nice_view node ==="
-          grep -A20 "nice_view:" build/zephyr/zephyr.dts || echo "No nice_view node found"
-          echo "=== SPI nodes ==="
-          grep -i "spi" build/zephyr/zephyr.dts || echo "No SPI found"
+          grep -A5 "chosen {" build/zephyr/zephyr.dts || true
+          echo "=== I2C and OLED nodes ==="
+          grep -i "i2c\|ssd1306\|oled" build/zephyr/zephyr.dts || echo "No I2C/OLED found"
       - name: Lily58 Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
