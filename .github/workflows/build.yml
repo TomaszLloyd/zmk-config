@@ -10,9 +10,9 @@ jobs:
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Cache west modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -43,9 +43,9 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 lily58_left_nice_nano.uf2
       - name: Archive (Lily58 Left)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-left
           path: lily58_left_nice_nano.uf2
       - name: West Build (Lily58 Right)
         run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=lily58_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -55,7 +55,7 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 lily58_right_nice_nano.uf2
       - name: Archive (Lily58 Right)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-right
           path: lily58_right_nice_nano.uf2
