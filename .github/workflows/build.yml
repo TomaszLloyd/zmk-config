@@ -39,7 +39,13 @@ jobs:
         run: west build -s zmk/app -b nice_nano -- -DSHIELD="lily58_left nice_view_adapter nice_view" -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Check devicetree for display
         if: always()
-        run: grep -i "ssd1306\|display\|i2c" build/zephyr/zephyr.dts || echo "No display found in devicetree"
+        run: |
+          echo "=== Display chosen node ==="
+          grep -A2 "chosen {" build/zephyr/zephyr.dts || true
+          echo "=== nice_view node ==="
+          grep -A20 "nice_view:" build/zephyr/zephyr.dts || echo "No nice_view node found"
+          echo "=== SPI nodes ==="
+          grep -i "spi" build/zephyr/zephyr.dts || echo "No SPI found"
       - name: Lily58 Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
