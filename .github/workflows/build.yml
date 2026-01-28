@@ -36,7 +36,7 @@ jobs:
       - name: List config files
         run: ls -la ${GITHUB_WORKSPACE}/config/
       - name: West Build (Lily58 Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD="lily58_left nice_view_adapter nice_view" -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=lily58_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Check devicetree for display
         if: always()
         run: |
@@ -56,7 +56,7 @@ jobs:
           name: firmware-left
           path: lily58_left_nice_nano.uf2
       - name: West Build (Lily58 Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD="lily58_right nice_view_adapter nice_view" -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=lily58_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Lily58 Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
